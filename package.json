@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "Start": "DEBUG=* & node app.js",
+    "start": "set DEBUG=app & node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
