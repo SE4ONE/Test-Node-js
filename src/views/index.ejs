@@ -2,5 +2,12 @@
 
 </head>
 <body>
-    <h1><%=username%> !!</h1> 
+    <h1>Hello <%=username%> !!</h1>
+    <ul>
+    <%
+        customers.map((i)=>{ %>
+            <li><%=i%></li>
+        <% })
+    %>
+    </ul>
 </body>
