@@ -5,6 +5,8 @@
     box-sizing: border-box;
     /* font-family: 'Poppins', sans-serif;
     font-family: 'Source Sans Pro', sans-serif; */
+    text-decoration: none;
+    list-style: none;
 }
 
 body {
@@ -28,7 +30,16 @@ header{
 	transition: all .50s ease;
 }
 .logo{
-    margin-left: 10vh;
+    font-family:'Poppins', sans-serif;
+
+	color: #fff;
+	font-size: 1.1rem;
+	font-weight: 500;
+	transition: all .50s ease;
+    
+}
+.logo{
+
     display: flex;
     align-items: center;
     
@@ -39,9 +50,6 @@ header{
 }
 .navbar{
     display:flex;
-    box-sizing: border-box;
-    list-style: none;
-    
 }
 .navbar a{
     font-family: 'Poppins', sans-serif;
@@ -52,17 +60,17 @@ header{
     margin: 0px 28px;
     transition: all .50s ease;
     line-height: 0;
-    text-decoration: none;
-}.navbar a:hover{
-	color: #fff;
+
+}
+.navbar a:hover{
+	color: rgb(247, 26, 107);
 }
 .navbar a:active{
-	color: #fff;
+	color: rgb(247, 26, 107);
 }
 .main{
 	display: flex;
 	align-items: center;
-    justify-content: space-between;
 }
 .main a{
     font-family:'Poppins', sans-serif;
@@ -74,19 +82,96 @@ header{
 	font-weight: 500;
 	transition: all .50s ease;
 }
+
+.register{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 45px;
+    background-color: rgb(247, 26, 107);
+    border-radius: 25px;
+
+}
+.user{
+	display: flex;
+	align-items: center;
+}
+.user a{
+	color: rgb(247, 26, 107);
+	font-size: 28px;
+	margin-right: 7px;
+}
+.main a:hover{
+	color: rgb(247, 26, 107);
+}.main .register:hover{
+    color: rgb(0, 0, 0);
+}
+#menu-icon{
+	font-size: 35px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 10001;
+	display: none;
+}
+@media (max-width: 1280px){
+	header{
+		padding: 14px 2%;
+		transition: .2s;
+	}
+	.navbar a{
+		padding: 5px 0;
+		margin: 0px 20px;
+	}
+}
+
+@media (max-width: 1090px){
+	#menu-icon{
+		display: block;
+	}
+	.navbar{
+		position: absolute;
+		top: 100%;
+		right: -100%;
+		width: 130px;
+		height: 29vh;
+		background-color:none;
+		display: flex;
+        align-items: flex-end;
+		flex-direction: column;
+		justify-content: flex-start;
+		transition: all .50s ease;
+	}
+	.navbar a{
+		display: block;
+		margin: 12px 0;
+		padding: 0px 25px;
+		transition: all .50s ease;
+	}
+	.navbar a:hover{
+		color: rgb(247, 26, 107);
+		transform: translateY(5px);
+    
+	}
+	.navbar a.active{
+		color: rgb(247, 26, 107);
+	}
+	.navbar.open{
+		right: 2%;
+	}
+}
+
+
+
+
+
+
+
+
 /* navbar */
 
 /* mainbox */
-/* .box{
-    margin-top: 10;
-    padding: auto;
-	align-items: center;
-    justify-content: center;
-    background: #fff;
-    width: 80vh;
-    height: 70px;
-    padding: 20px;
-} */
+
 /* mainbox */
 /* bg */
 .bg .container {

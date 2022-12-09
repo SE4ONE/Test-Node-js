@@ -6,7 +6,6 @@ const path = require('path');
 const productRounter = express.Router();
 const app = express();
 const PORT = process.env.PORT;
-const mysql = require('mysql');
 
 app.use(morgan('combined'));
 app.use(express.static(path.join(__dirname, "/public/")));
