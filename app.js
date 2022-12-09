@@ -6,20 +6,20 @@ const path = require('path');
 const productRounter = express.Router();
 const app = express();
 const PORT = process.env.PORT;
-
+const mysql = require('mysql');
 
 app.use(morgan('combined'));
 app.use(express.static(path.join(__dirname, "/public/")));
 
 app.set("views", "./src/views");
 app.set("view engine", "ejs")
-
+app.use("/products", productRounter);
 
 productRounter.route("/").get((req, res) => {
-    res.render("products")
+    res.send("helloworld")
 });
 productRounter.route("/1").get((req, res) => {
-    res.send("hello world")
+    res.send("helloworld 1")
 });
 app.use("/products", productRounter);
 app.get("/", (req, res) => {
