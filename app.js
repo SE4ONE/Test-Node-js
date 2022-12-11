@@ -23,7 +23,7 @@ productRounter.route("/1").get((req, res) => {
 app.use("/products", productRounter);
 app.get("/", (req, res) => {
 
-    res.render('index', { username: 'Nuengza55+', customers: ["Nueng", "tong", "M111", "amm", "sai"] });
+    res.render('index');
 
 })
 app.listen(PORT, () => {
