@@ -15,7 +15,7 @@ body {
     align-items: center;
     min-height: 100vh;
     background: #0c192c;
-    
+
 }
 
 /* navbar */
@@ -206,18 +206,22 @@ header {
     opacity: 0.7;
 }
 
-
 .page-content {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 500px;
-    height: 70%;
+    width: 50vw;
+    max-width: 50vw ;
+    min-width: 80vw;
+    height: 50%;
     padding: auto;
     background-color: #070f1a;
     border-radius: 50px;
 }
 
+/* banner */
+
+/* banner */
 
 
 /* mainbox */
@@ -230,6 +234,7 @@ header {
     height: 100vh;
     overflow: hidden;
 }
+
 
 .bg .bubbles {
     position: relative;
