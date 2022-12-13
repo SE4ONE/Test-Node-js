@@ -21,6 +21,7 @@ productRounter.route("/1").get((req, res) => {
     res.send("helloworld 1")
 });
 app.use("/products", productRounter);
+
 app.get("/", (req, res) => {
 
     res.render('index');

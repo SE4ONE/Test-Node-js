@@ -9,12 +9,12 @@
     text-decoration: none;
     list-style: none;
 }
-
 body {
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: #0c192c;
+    
+    background: #003972;
+    background: -moz-linear-gradient(top,  #2C3E50 0%, #001322 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2C3E50), color-stop(100%,#001322));
+
 
 }
 
@@ -56,7 +56,6 @@ header {
 
 .navbar {
     display: flex;
-    margin-left: 7vh;
 }
 
 .navbar a {
@@ -86,10 +85,8 @@ header {
 
 .main a {
     font-family: 'Poppins', sans-serif;
-
     margin-right: 10px;
     margin-left: 0px;
-    color: #fff;
     font-size: 1.1rem;
     font-weight: 500;
     transition: all .50s ease;
@@ -99,30 +96,36 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #0c192c;
     width: 120px;
     height: 40px;
-    background-color: rgb(247, 26, 107);
-    border-radius: 25px;
-    box-shadow:none;
+    background-color: #ff2d75;
+    border-radius: 5px;
+
 }
 
 .user {
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 40px;
+    color: #ffffff;
+    background-color: none;
+    border: 2.0px solid #ffffff;
+    border-radius: 5px;
 }
 
-.user a {
-    color: rgb(247, 26, 107);
-    font-size: 28px;
-    margin-right: 7px;
-}
 
-.main a:hover {
-    color: rgb(247, 26, 107);
+.main .user:hover {
+    color: #2C3E50;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    background-color: #ffffff;
 }
 
 .main .register:hover {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    background-color: #001322;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
@@ -174,13 +177,13 @@ header {
     }
 
     .navbar a:hover {
-        color: rgb(247, 26, 107);
+        color: #ff2d75;
         transform: translateY(5px);
 
     }
 
     .navbar a.active {
-        color: rgb(247, 26, 107);
+        color: rgb(0, 0, 0);
     }
 
     .navbar.open {
@@ -189,71 +192,46 @@ header {
 }
 
 /* navbar */
-
-
-
-/* mainbox */
-.mainbox {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: auto;
-    width: 100%;
-    height: 100vh;
+/* mainpage */
+#page{
     z-index: 1;
-    position: absolute;
-    opacity: 1;
-}
-
-.page-content {
-    display: grid;
-    justify-content: center;
-    background: none;
-}
-
-/* banner */
-.banner{
-    padding: 2rem;
-}
-.slider-wrapper{
-    position: relative;
-    width: 60vw;
+    width: 70%;
     margin: 0 auto;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-}
-.slider{
-    display: flex;
-    aspect-ratio: 16/9;
-    overflow-x: hidden;    
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    border-radius: 0.5rem;
-}
-.slider img{
-    flex: 1 0 100%;
-}
-.slider-nav{
-    display: flex;
-    column-gap: 1vh;
     position: absolute;
-    bottom: 1.25rem;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%);
-    z-index: 1;
-}.slider-nav a{
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 50%;
-    background-color: #fff;
-    opacity: 0.75;
-    transform: opacity ease 250ms;
-}.slider-nav a:hover{
-    opacity: 1;
+    transform: translate(-50%,-50%);
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #0c192c;
+
+
 }
-/* banner */
-
-
-/* mainbox */
+#page .banner{
+    z-index: 10;
+    width: 50%;
+    height: 200px;
+    position: relative;
+    background-color: #9fcfff;
+}
+#page .webinfoshop{
+    z-index: 10;
+    width: 50%;
+    height: 240px;
+    position: relative;
+    background-color: #9fffc7;
+}
+#page .sgproduct{
+    z-index: 10;
+    width: 50%;
+    height: 10px;
+    position: relative;
+    background-color: #9fffc7;
+}
+/* mainpage */
 
 /* bg */
 .bg .container {
@@ -281,7 +259,7 @@ header {
         0 0 50px #4fc3dc,
         0 0 100px #4fc3dc;
     animation: animatebg 15s linear infinite;
-    animation-duration: calc(150s / var(--i));
+    animation-duration: calc(125s / var(--i));
 }
 
 .bg .bubbles span:nth-child(even) {
@@ -305,9 +283,13 @@ header {
 /* footer */
 
 .footer-basic {
+
+    left: 0;
+    bottom: 0;
+    padding-top: 10px;
+    width: 100%;
     z-index: 1;
-    padding: 20px 0;
-    background-color: #0c192c;
+    background-color: none;
 }
 
 .footer-basic ul {
@@ -317,7 +299,6 @@ header {
     text-align: center;
     font-size: 18px;
     line-height: 1.0;
-    margin-bottom: 0;
 }
 
 
